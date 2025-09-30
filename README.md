@@ -4,6 +4,11 @@ module load module load blast/2.16.0+
 
 download HLA database A_nuc.fasta, B_nuc.fasta, C_nuc.fasta
 
+ftp://ftp.ebi.ac.uk/pub/databases/ipd/imgt/hla/
+
+use filezilla3 to download
+
+
 change the header to only keep the HLA type
 ```
 sed -E 's/^>[^ ]+ ([^ ]+).*/>\1/' C_nuc.fasta > C_nuc_new_header.fasta
